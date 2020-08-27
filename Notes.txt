@@ -1,0 +1,11 @@
+Adding node modules => node init
+importing file => require('filename')
+exporting file => module.export = functionname
+
+Data comes as chunks => collected makes buffer => collected makes complete Data
+Like it comes from the input field
+
+You cant write anything else on the dom after returning res.end
+
+createServer takes 2 arguments, Response and Request. They have other features, objects and functions to use
+
