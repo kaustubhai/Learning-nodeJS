@@ -20,6 +20,11 @@ If a middleware dont call next, it kills the loop;
 
 Intead of app.use(), we can use app.get() or app.post() as well to check if the user is entering the page with get request or post request
 
+By creating files in the views folder (Name can be anything), and managing them wth javascript in routes folder, I can load specific files at specific routes
+Like at url/app/product I can host variable/local/product/123.html
 
+path from express is effecient way to mention paths in these complex folder types
+
+app.use(static('file directory here')) makes a folder public to all. It means that content of that folder will be accesible to anyone
 
 ----------------------------------------------------------------------------------------------------------------------->
