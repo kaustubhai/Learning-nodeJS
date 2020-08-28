@@ -1,0 +1,25 @@
+Adding node modules => node init
+importing file => require('filename')
+exporting file => module.export = functionname
+
+Data comes as chunks => collected makes buffer => collected makes complete Data
+Like it comes from the input field
+
+You cant write anything else on the dom after returning res.end
+
+createServer takes 2 arguments, Response and Request. They have other features, objects and functions to use
+
+----------------------------------------------------------------------------------------------------------------------->
+
+Express.js 
+const app = express(); imports express functionalities to app module
+
+app.use() is a middleware (most important for express)
+It always take 3 arguement
+If a middleware dont call next, it kills the loop;
+
+Intead of app.use(), we can use app.get() or app.post() as well to check if the user is entering the page with get request or post request
+
+
+
+----------------------------------------------------------------------------------------------------------------------->

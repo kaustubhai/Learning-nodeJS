@@ -1,0 +1,19 @@
+{
+  "name": "first-node-app",
+  "version": "1.0.0",
+  "description": "files I will be creating following a node js course [Express.JS module]",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "kaustubh",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
