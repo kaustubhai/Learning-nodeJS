@@ -7,7 +7,7 @@ const user = require('./routes/user');
 
 const app = express();
 
-app.use(admin);
+app.use(admin.route);
 app.use(user);
 app.use(express.static(path.join(__dirname, 'public')));
 
