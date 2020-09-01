@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{page}
+        link(rel="stylesheet", href="/styles/main.css")
+        link(rel="stylesheet", href="/styles/add-product.css")
+    body
+        header
+            nav
+                ul
+                    li.header__link_items
+                        a.header__link_anchor.link__active(href="/admin/product") Home
+                    li.header__link_items
+                        a.header__link_anchor(href="/admin/product") Admin
+                    li.header__link_items
+                        a.header__link_anchor(href="/admin/product") Add Product
+
+        h1 This is the add product page of the website
+        
+        form(action="/admin/product" method="POST")
+            input(autocomplete="off" type="text" placeholder="Product name" name="product")
+            button(type="submit") Submit

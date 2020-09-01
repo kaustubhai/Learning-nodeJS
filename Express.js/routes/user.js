@@ -8,7 +8,7 @@ const itemData = require('./admin')
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/admin/product', (req, res, url) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'))
-    console.log(itemData.product)
+    const product = itemData.product;
+    res.render('add-product', { item: product, page: 'shop' });
 })
 module.exports = app;

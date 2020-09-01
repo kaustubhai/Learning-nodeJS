@@ -10,9 +10,11 @@ let products = [];
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/admin/product', (req, res, url) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'admin.html'))
-    products.push({title: req.body.product});
+    
+    res.setHeader('content-type','text/html');
+    res.render('admin', {item: req.body.product})
+    console.log(req)
+    
 })
-
 exports.route = app;
 exports.product = products; 
