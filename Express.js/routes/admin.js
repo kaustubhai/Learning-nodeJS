@@ -11,8 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/admin/product', (req, res, url) => {
     
-    res.setHeader('content-type','text/html');
-    res.render('admin', {item: req.body.product})
+    res.setHeader('content-type', 'text/html');
+    products.push(req.body.product);
+    res.render('admin', {item: products})
     console.log(req)
     
 })

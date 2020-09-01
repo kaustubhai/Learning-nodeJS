@@ -18,6 +18,10 @@ html(lang="en")
                     a.header__link_anchor(href="/admin/product") Add Product
 
     h1 This is the admin panel of the website
-    p Added Product list goes like this: 
-    ul
-        li #{item}
+    if item.length > 0
+        p Added Product list goes like this: 
+        ul
+            each i in item
+                li #{i}
+    else
+        h1 No product Found
