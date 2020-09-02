@@ -41,3 +41,13 @@ However this JS is not rendered on DOM and instead is use to generate HTML eleme
 
 ----------------------------------------------------------------------------------------------------------------------->
 
+MVC -> Model View Control
+
+Every code can be distributed in terms of MVC
+It is done so that the code becomes self-explanatory. Which code is the rendering part, which code controls route and so on
+
+Model -> Any element for user, responsible to add delete modify our database from the interface itself
+View -> what user sees. In this case any output by templaing engine including static and dynamic code
+Controller -> Manages routes of files. on which URL which file to render
+
+----------------------------------------------------------------------------------------------------------------------->
