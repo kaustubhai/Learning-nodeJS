@@ -1,0 +1,21 @@
+<%- include('include/head.ejs') %>
+</head>
+<body>
+    <header>
+        <%- include('include/menu.ejs') %>
+    </header>
+    <h1>
+        This is the admin panel of the website
+    </h1>
+    <% if(item.length > 0) { %>
+    <p>Added Product list goes like this: </p>
+    <ul>
+        <% for (let i of item) {%>
+            <p><%= i %></p>
+        <% } %>
+    </ul>
+    <% } else { %>
+        <p>No products found</p>
+    <% } %>
+</body>
+</html>

@@ -7,7 +7,7 @@ const user = require('./routes/user');
 
 const app = express();
 
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 app.set();
 
 app.use(admin.route);

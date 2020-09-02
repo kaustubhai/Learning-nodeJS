@@ -28,3 +28,16 @@ path from express is effecient way to mention paths in these complex folder type
 app.use(static('file directory here')) makes a folder public to all. It means that content of that folder will be accesible to anyone
 
 ----------------------------------------------------------------------------------------------------------------------->
+
+There are many different template engine like pug, handlebars and ejs
+They all have different syntax but common methods to handle dunamic content
+
+The content to be printed is putted on <%= %>
+
+content is provided to the template engine from routes files. it can ve any value or array
+
+Ejs makes easy to embed js code to loop and apply if-else in between html code
+However this JS is not rendered on DOM and instead is use to generate HTML elements only
+
+----------------------------------------------------------------------------------------------------------------------->
+
