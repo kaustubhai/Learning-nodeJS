@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/add-product.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="header__link_items" ><a class="header__link_anchor" href="/admin/product">Home</a></li>
+                <li class="header__link_items" ><a class="header__link_anchor"  href="/admin/product">Admin</a></li>
+                <li class="header__link_items" ><a class="header__link_anchor link__active"  href="/admin/product">Add Product</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>
+        This is the add product page of the website
+    </h1>
+    <form action="/admin/product" method="POST">
+        <input autocomplete="off" type="text" placeholder="Product name" name="product">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
