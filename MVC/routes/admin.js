@@ -9,6 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const product = require('../controllers/admin')
 
-app.post('/shop', product)
+app.use('/shop', product)
 
 module.exports = app;
