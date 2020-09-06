@@ -8,7 +8,7 @@ const userRouter = require('./routes/user');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set();
+app.set('views', 'views');
 
 app.use(adminRouter);
 app.use(userRouter);

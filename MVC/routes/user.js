@@ -8,6 +8,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const userInput = require('../controllers/shop')
 
-app.get('/admin/product', userInput);
+app.get('/admin/add-product', userInput);
 
 module.exports = app;

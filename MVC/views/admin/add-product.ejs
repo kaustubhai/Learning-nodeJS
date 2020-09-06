@@ -1,14 +1,14 @@
-<%- include('include/head.ejs') %>
+<%- include('../include/head.ejs') %>
     <link rel="stylesheet" href="/styles/add-product.css">
 </head>
 <body>
     <header>
-        <%- include('include/menu.ejs') %>
+        <%- include('../include/menu.ejs') %>
     </header>
     <h1>
         This is the add product page of the website
     </h1>
-    <form action="/admin/product" method="POST">
+    <form action="/shop" method="POST">
         <input autocomplete="off" type="text" placeholder="Product name" name="product">
         <button type="submit">Submit</button>
     </form>
