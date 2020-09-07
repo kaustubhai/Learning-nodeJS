@@ -11,7 +11,9 @@
     <p>Added Product list goes like this: </p>
     <ul>
         <% for (let i of item) {%>
-            <p><%= i.title %></p>
+            <h1><%= i.title %></h1>
+            <p><%= i.description %></p>
+            <h2><%= i.price %></h2>
         <% } %>
     </ul>
     <% } else { %>

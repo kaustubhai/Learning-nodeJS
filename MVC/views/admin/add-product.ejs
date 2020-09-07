@@ -1,4 +1,11 @@
-<%- include('../include/head.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="304workaround" content="2013-10-24 21:17:23">
+    <title>NodeJS App</title>
+    <link rel="stylesheet" content-type="text/css" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/add-product.css">
 </head>
 <body>
@@ -9,9 +16,12 @@
         This is the add product page of the website
     </h1>
     <form action="/shop" method="POST">
-        <input autocomplete="off" type="text" placeholder="Product name" name="product">
+        <input autofocus autocomplete="off" type="text" placeholder="Product Name" name="product">
+        <input autocomplete="off" type="text" placeholder="Enter Description" name="description">
+        <input autocomplete="off" type="url" placeholder="Enter Image URL" name="image">
+        <input autocomplete="off" type="number" placeholder="Enter Price of Product" name="price">
         <button type="submit">Submit</button>
     </form>
 
 </body>
-</html>
+</html> 

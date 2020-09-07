@@ -1,8 +1,10 @@
 const products = [];
 
 class Product{
-    constructor(t) {
-        this.title = t;
+    constructor(title, description, price) {
+        this.title = title;
+        this.description = description;
+        this.price = price;
     }
 
     save() {
@@ -10,7 +12,6 @@ class Product{
     }
 
     static fetchAll() {
-        console.log(products)
         return products;
     }
 }

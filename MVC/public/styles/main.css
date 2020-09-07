@@ -18,6 +18,9 @@ header{
     margin: 0;
     padding: 20px;
 }
+header h1{
+    color: red;
+}
 .header__link_items{
     display: inline-block;
     list-style: none;

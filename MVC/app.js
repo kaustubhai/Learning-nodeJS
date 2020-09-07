@@ -2,16 +2,18 @@ const http = require('http');
 const path = require('path')
 const express = require('express');
 
-const adminRouter = require('./routes/admin')
-const userRouter = require('./routes/user');
+const addProductRouter = require('./routes/add-product')
+const shopRouter = require('./routes/shop');
+const indexRouter = require('./routes/index');
 
 const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-app.use(adminRouter);
-app.use(userRouter);
+app.use(addProductRouter);
+app.use(shopRouter);
+app.use(indexRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 
 const E404 = require('./controllers/404')

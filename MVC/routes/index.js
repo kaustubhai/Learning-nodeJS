@@ -7,8 +7,8 @@ const app = express.Router();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const product = require('../controllers/admin')
+const index = require('../controllers/index')
 
-app.use('/shop', product)
+app.use('/', index)
 
 module.exports = app;

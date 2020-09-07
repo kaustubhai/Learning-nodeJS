@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const userInput = require('../controllers/shop')
+const userInput = require('../controllers/add-product')
 
 app.get('/admin/add-product', userInput);
 
