@@ -1,0 +1,5 @@
+Basic sructure of the building block of the project
+
+For a shop -> products are building block
+
+This folder hence creatre the product structure. The things it has and needs like name, price, etc and combine them in a class as data encapsulation

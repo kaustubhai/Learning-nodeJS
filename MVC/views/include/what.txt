@@ -1,0 +1,2 @@
+This ejs files are common in almost every other ejs files outside this folder. So we extract them. place it here, once.
+Include these files in the other ejs files to inherit the code written here in all other files

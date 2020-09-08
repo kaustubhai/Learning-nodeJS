@@ -1,0 +1,3 @@
+Files here mathces route in the url. Render the ejs mentioned in the files here according to the requested url
+
+ejs is provided by the controllers however

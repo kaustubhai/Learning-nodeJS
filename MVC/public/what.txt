@@ -1,0 +1,2 @@
+This is defined as static folder in app.js
+Which means it is basically here to seperate files in it but in path etc it does not count

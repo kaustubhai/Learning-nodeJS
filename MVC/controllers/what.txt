@@ -1,0 +1,6 @@
+Controllers basically maintain the state of the app.
+
+They control the input and output and the state. 
+They populates the dynamic content of the ejs with the help of data present in the model and update model with the input from ejs
+
+They render the final product to the router. Which checks the url and put right file into the dom
