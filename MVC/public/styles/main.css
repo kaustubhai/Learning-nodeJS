@@ -2,7 +2,7 @@ body{
     margin: auto;
     text-align: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -18,9 +18,6 @@ header{
     margin: 0;
     padding: 20px;
 }
-header h1{
-    color: red;
-}
 .header__link_items{
     display: inline-block;
     list-style: none;
@@ -35,4 +32,13 @@ header h1{
     background-color: rgb(195, 0, 235);
     padding: 10px 15px;
     border-radius: 5px;
+}
+@media only screen and (max-width: 600px){
+    header{
+        padding: 15px 5px;
+    }
+    .header__link_items{
+        font-size: 1rem;
+        padding-right: 2%;
+    }
 }

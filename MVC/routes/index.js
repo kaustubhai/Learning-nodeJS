@@ -9,6 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const index = require('../controllers/index')
 
-app.use('/', index)
+app.use('/home', index)
 
 module.exports = app;
