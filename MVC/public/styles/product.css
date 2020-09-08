@@ -9,8 +9,8 @@
     display: inline-block;
 }
 .item-card:hover{
-    -moz-box-shadow: 0 0 5px #999;
-    -webkit-box-shadow: 0 0 5px #999;
+    -moz-box-shadow: 0 0 10px #666;
+    -webkit-box-shadow: 0 0 10px #666;
     box-shadow: 0 0 5px #999;
 }
 .item-card h2{
