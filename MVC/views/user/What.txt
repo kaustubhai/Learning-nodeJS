@@ -1,0 +1,1 @@
+This contains all the ejs file rendered for the user side

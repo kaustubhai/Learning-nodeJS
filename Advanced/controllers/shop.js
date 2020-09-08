@@ -14,8 +14,8 @@ exports.getProductDetails = (req, res, next) => {
   const id = req.params.productId;
   Product.findById(id, (product) => {
     console.log(product)
+  res.render('shop/product-detail', {product: product, pageTitle: `${product.title}-${product.description}`, path: '/NA'})
   })
-  res.redirect('/')
 };
 
 exports.getIndex = (req, res, next) => {
