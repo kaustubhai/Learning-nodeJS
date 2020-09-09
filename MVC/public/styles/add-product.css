@@ -25,3 +25,15 @@ button{
     cursor: pointer;
     margin-top: -5000px;
 }
+@media only screen and (max-width: 600px) {
+    input{
+        margin-top: 15px;
+        font-size: 1rem;
+        width: 80%;
+    }
+    button{
+        display: block;
+        margin: auto;
+        margin-top: 25px
+    }
+}
