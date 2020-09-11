@@ -11,13 +11,6 @@
     <!-- Item below comes ftom render function second parameters -->
     <% if(item.length > 0) { %>
     <p>Added Product list goes like this: </p>
-    <!-- <ul>
-        <% for (let i of item) {%>
-            <h1><%= i.title %></h1>
-            <p><%= i.description %></p>
-            <h2><%= i.price %></h2>
-        <% } %>
-    </ul> -->
     <div class="product-catalog">
         <% for (let i of item) {%>
         <div class="item-card">
@@ -25,7 +18,10 @@
             <h2><%= i.title %></h2>
             <p><%= i.description %></p>
             <h1><%= i.price %><span>INR</span></h1>
+            <form action="/cart">
             <button>Add to Cart</button>
+            <input type="hidden" name="id" value="<%= i.id %>" >
+            </form>
         </div>
         <% } %>
     </div>
