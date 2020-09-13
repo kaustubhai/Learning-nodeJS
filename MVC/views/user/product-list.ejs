@@ -18,9 +18,9 @@
             <h2><%= i.title %></h2>
             <p><%= i.description %></p>
             <h1><%= i.price %><span>INR</span></h1>
-            <form action="/cart">
-            <button>Add to Cart</button>
+            <form method="POST" action="/cart">
             <input type="hidden" name="id" value="<%= i.id %>" >
+            <button>Add to Cart</button>
             </form>
         </div>
         <% } %>

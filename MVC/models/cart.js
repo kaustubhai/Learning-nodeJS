@@ -1,21 +1,39 @@
-class Cart {
-    static addProduct(price, id) {
-        cart = { items: [], price: 0 };
-        const existingProductId = cart.items.findIndex(item => item.id === id)
-        const existingProduct = cart[existingProductId];
+const path = require('path');
+const fs = require('fs');
+
+const p = path.join(
+    path.dirname(process.mainModule.filename),
+    'data',
+    'cart.json'
+);
+
+let cart = {totalPrice: 0, products: []}
+
+module.exports = class Cart {
+    static addProduct(id, price) {
+        fs.readFile(p, (err, fileContent) => {
+            if (err)
+                console.log(err);
+            else {
+                cart = JSON.parse(fileContent);
+            }
+        })
+        const existingProductId = cart.products.findIndex(prod => prod.id === id);
+        const existingProduct = cart.products[existingProductId];
+        let updatedProduct;
         if (existingProduct) {
-            const updateProduct = { ...existingProduct }; 
-            updateProduct.qty += 1;
-            cart.items = [...cart.items];
-            cart.items[existingProductId] = updateProduct;
+            updatedProduct = { ...existingProduct };
+            updatedProduct.qty = updatedProduct.qty + 1;
+            cart.products = [...cart.products]
+            cart.products[existingProductId] = updatedProduct;
         }
         else {
-            updateProduct = { id: 1, qty: 1 };
-            cart.items = [...cart.items, updateProduct];
+            updatedProduct = { id: id, qty: 1 };
+            cart.products = [...cart.products, updatedProduct];
         }
-        cart.price += +price;
-        console.log(cart);
-     }
-}
- 
-module.exports = Cart;
+        cart.totalPrice = cart.totalPrice + +price;
+            fs.writeFile(p, JSON.stringify(cart), (err) => {
+                console.log(err)
+        });
+    }
+ }

@@ -2,10 +2,8 @@ const Cart = require('../models/cart');
 const Product = require('../models/product');
 
 const cartItems = (req, res, url) => {
-    const id = req.id;
-    Product.findById(id, (product) => {
-        Cart.addProduct(id, product.price)
-    })
+    const id = req.body.id;
+    Cart.addProduct(id);
     res.render('user/cart.ejs', { actice: 'cart' });
 }
 

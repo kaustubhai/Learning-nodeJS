@@ -1,7 +1,9 @@
 const fs = require('fs');
+const { dirname } = require('path');
 const path = require('path');
 
 const p = path.join(__dirname, '..', 'data', 'products.json');
+const c = path.join(__dirname, '..', 'data', 'cart.json');
 
 const getProductsFromFile = cb => {
   fs.readFile(p, (err, fileContent) => {
@@ -49,7 +51,21 @@ class Product{
 
     static fetchAll(cb) {
       getProductsFromFile(cb)
-        }
+  }
+
+  findById(id) {
+    fs.readFile(c, (err, fileContent) => {
+      if (err)
+        console.log(err);
+      else{
+        const data = JSON.parse(fileContent);
+        data.forEach(item => {
+          if (item.id === id)
+            return true
+        })
+      }
+      })
+    }
 }
 
 module.exports = Product;
