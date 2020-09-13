@@ -6,12 +6,11 @@
         <main class="centered">
             <h1><%= product.title %></h1>
             <hr>
-            <img src="<%= product.imageUrl %>" alt="<%= product.title%>" height="350px" width="350px">
+            <div>
+                <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+            </div>
             <h2><%= product.price %></h2>
-            <p><%= product.description%></p>
-            <form action="/cart" method="POST">
-            <button type="submit" class="btn">Add to Cart</button>
-            <input type="hidden" name="id" value= "<%= product.id %>" >
-            </form>
+            <p><%= product.description %></p>
+            <%- include('../includes/add-to-cart.ejs') %>
         </main>
         <%- include('../includes/end.ejs') %>
